@@ -15,4 +15,6 @@ if [[ `client "(org-clock-is-active)"` == "nil" ]] ; then
 else
     echo -n '⏱'
     client "(org-clock-get-clock-string)" | head -n 1 | cut -d'"' -f2
+    echo '---'
+    echo 'Clock out | shell=/usr/local/bin/emacsclient | param1=--eval | param2="(org-clock-out)" | refresh=true'
 fi
